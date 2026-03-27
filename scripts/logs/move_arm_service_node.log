@@ -1,0 +1,11 @@
+[33m[WARN] [1772892829.233113445]: Skipping virtual joint 'arm_base_joint' because its child frame 'fr3_link0' does not match the URDF frame 'robot_base_footprint'[0m
+[33m[WARN] [1772892829.233157678]: Link robot_base_footprint has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[WARN] [1772892829.581061452]: Link robot_base_logo_front has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[WARN] [1772892829.581092369]: Link robot_base_logo_left has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[WARN] [1772892829.581102398]: Link robot_base_logo_rear has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[WARN] [1772892829.581111555]: Link robot_base_logo_right has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[33m[WARN] [1772892829.581119961]: Link robot_base_chapa has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.[0m
+[INFO] [1772892830.608382]: MoveArm service ready on /move_arm
+[0m[INFO] [1772892829.232225093]: Loading robot model 'rbkairos'...[0m
+[0m[INFO] [1772892829.233142068]: No root/virtual joint specified in SRDF. Assuming fixed joint[0m
+[0m[INFO] [1772892830.606036391]: Ready to take commands for planning group arm.[0m

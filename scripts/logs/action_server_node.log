@@ -1,0 +1,3 @@
+[INFO] [1772892830.673494]: Waiting for gripper action server: /robot/arm/franka_gripper/move
+[INFO] [1772892830.890037]: Gripper action server connected.
+[INFO] [1772892830.894168]: ActionOrchestrator service ready on /action_server

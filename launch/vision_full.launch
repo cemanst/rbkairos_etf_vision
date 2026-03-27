@@ -1,0 +1,29 @@
+<launch>
+    <!-- 1. Static Transform Publisher -->
+    <node pkg="tf2_ros" type="static_transform_publisher" name="camera_ee_broadcaster" 
+          args="-0.05236895 0.03666473 -0.07956362 -0.008328826747513679 0.0027495380545793395 0.71525560603233 -0.6988079054538671 fr3_EE camera_link_proxy" />
+
+    <!-- 2. MoveGroup (MoveIt) -->
+    <group ns="robot">
+        <include file="$(find rbkairos_franka_moveit_config)/launch/move_group.launch" />
+
+        <!-- 3. Move MoveIt FR3 -->
+        <node pkg="rbkairos_edge_vision" type="move_moveit_fr3.py" name="move_moveit_fr3" output="screen" />
+
+        <!-- 4. Move RB-Kairos -->
+        <node pkg="rbkairos_edge_vision" type="move_rbkairos.py" name="move_rbkairos" output="screen" />
+
+        <!-- 5. Action Manager -->
+        <node pkg="rbkairos_edge_vision" type="action_manager.py" name="action_manager" output="screen" />
+    </group>
+
+    <!-- 6. Realsense Camera Node -->
+    <include file="$(find realsense2_camera)/launch/rs_camera.launch">
+        <arg name="align_depth" value="true" />
+        <arg name="color_width" value="640" />
+        <arg name="color_height" value="480" />
+        <arg name="color_fps" value="15" />
+        <arg name="depth_fps" value="15" />
+    </include>
+
+</launch>
